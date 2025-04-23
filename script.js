@@ -54,3 +54,16 @@ window.addEventListener('scroll', () => {
     const offset = circumference * (1 - scrollPercent);
     circle.style.strokeDashoffset = offset;
 });
+
+// handling gallery image popup 
+function openModal(imageSrc) {
+    const modal = document.getElementById('imageModal');
+    const modalImg = document.getElementById('modalImage');
+
+    modalImg.src = imageSrc;
+    modal.style.display = 'flex'; // show modal
+}
+
+function closeModal() {
+    document.getElementById('imageModal').style.display = 'none';
+}
