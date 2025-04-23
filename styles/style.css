@@ -1,0 +1,453 @@
+/* font FRYBASKN */
+@font-face {
+    font-family: 'frybt';
+    src: url('/fonts/frysbaskerville-bt-cufonfonts/FRYBASKN.TTF') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* font avenir */
+@font-face {
+    font-family: 'avenir';
+    src: url('/fonts/avenir-font/AvenirLTStd-Light.otf') format('woff2');
+    font-weight: normal;
+    font-style: normal;
+}
+
+:root {
+    --theme-dark: #035434;
+    --button-color: linear-gradient(135deg, #057e4e, #035434);
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'frybt', 'sens-serif';
+}
+
+p {
+    font-family: 'avenir';
+}
+
+.grace-btn {
+    background: var(--button-color) !important;
+}
+
+/* header styling starts here  */
+.header {
+    background: var(--button-color);
+}
+
+.navbar-brand {
+    height: 60px;
+}
+
+.navbar-brand img {
+    width: 100%;
+    height: 100%;
+}
+
+.navbar-nav {
+    font-family: "avenir";
+}
+
+.fixed-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1050;
+    transition: transform 0.3s ease-in-out;
+}
+
+.header-hide {
+    transform: translateY(-100%);
+}
+
+.header-show {
+    transform: translateY(0);
+}
+
+/* header styling ends here  */
+
+/* hero section style starts here  */
+.banner-div::before {
+    content: "";
+    position: absolute;
+    top: 2vh;
+    background-color: rgb(255, 128, 0);
+    height: 25vh;
+    width: 20vw;
+    max-width: 150px;
+    max-height: 180px;
+    border-bottom-right-radius: 7rem;
+    opacity: 0.3;
+}
+
+.banner-text {
+    font-size: clamp(2.5rem, 5vw, 4.25rem);
+    /* responsive font size */
+    line-height: 1.2;
+    font-family: "frybt", sans-serif;
+    word-break: break-word;
+    margin-bottom: 1rem;
+}
+
+.learn-more-btn {
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    padding: 1rem 2rem;
+    font-size: 1rem;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: none;
+    background-color: var(--theme-dark);
+    color: #fff;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.learn-more-btn .arrow-icon {
+    display: inline-block;
+    margin-left: 0.5rem;
+    transition: transform 0.3s ease;
+    position: relative;
+}
+
+.learn-more-btn:hover .arrow-icon {
+    transform: translateX(5px);
+}
+
+/* hero section style starts here  */
+
+
+/* about us section style starts here  */
+
+.services-container {
+    width: 300px;
+    border-top-left-radius: 3rem !important;
+    border-bottom-left-radius: 3rem !important;
+    border-bottom-right-radius: 3rem !important;
+    background: linear-gradient(135deg, #057e4e, #035434);
+    color: #fff;
+}
+
+.circle-icon {
+    width: 70px;
+    height: 70px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+/* about us section style ends here  */
+
+.marquee-container {
+    width: 100%;
+    overflow: hidden;
+    box-sizing: border-box;
+    background-color: #f1f1f1;
+    border: 1px solid #ccc;
+    padding: 30px;
+}
+
+.marquee-track {
+    display: flex;
+    gap: 3rem;
+    animation: scroll-left 5s linear infinite;
+    font-size: 3.5rem;
+    white-space: nowrap;
+    align-items: center;
+}
+
+.marquee-container:hover .marquee-track {
+    animation-play-state: paused;
+}
+
+.marquee-text {
+    display: flex;
+    align-items: center;
+    flex-shrink: 0;
+    font-weight: 700;
+}
+
+.marquee-text i {
+    margin-right: 1rem;
+}
+
+@keyframes scroll-left {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+/* amenities style starts here  */
+.amenities-section {
+    background: #f9f9f9;
+    padding: 60px 0;
+}
+
+.amenity-box {
+    background: #fff;
+    border-radius: 20px;
+    text-align: center;
+    padding: 30px 20px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    height: 100%;
+}
+
+.amenity-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 15px 25px rgba(0, 0, 0, 0.1);
+}
+
+.amenity-icon {
+    font-size: 3rem;
+    margin-bottom: 15px;
+    color: var(--theme-dark);
+}
+
+.amenity-label {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+}
+
+/* amenities style ends here  */
+
+.location-card {
+    border: none;
+    border-radius: 1rem;
+    overflow: hidden;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05);
+    transition: transform 0.3s ease;
+}
+
+.location-card:hover {
+    transform: translateY(-5px);
+}
+
+.location-card img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+}
+
+.location-card-body {
+    padding: 1.5rem;
+}
+
+.location-number {
+    width: 50px;
+    height: 50px;
+    background: var(--button-color);
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bold;
+    font-size: 1.25rem;
+    border-radius: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.location-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.location-desc {
+    color: #555;
+}
+
+
+/* contact us styles starts here  */
+
+/* contact us styles ends here  */
+
+
+/* footer styles starts here */
+.footer-logo {
+    width: 200px;
+    height: 100px;
+    margin: 1rem 0rem;
+}
+
+.footer-logo img {
+    width: 100%;
+    height: 100%;
+}
+
+footer {
+    background-color: #343a40;
+    color: #ffffff;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
+
+footer .fab {
+    transition: transform 0.3s ease;
+}
+
+footer .fab:hover {
+    transform: scale(1.2);
+}
+
+footer {
+    padding: 0;
+    margin: 0;
+}
+
+footer .row {
+    margin-right: 0;
+    margin-left: 0;
+}
+
+/* footer styles ends here */
+/* scroll-trigger style starts here  */
+
+#scroll-circle {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 9999;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+}
+
+#scroll-circle svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+#scroll-indicator {
+    stroke-dasharray: 163.36;
+    stroke-dashoffset: 163.36;
+    transition: stroke-dashoffset 0.2s ease;
+}
+
+.scroll-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 24px;
+    color: var(--theme-dark);
+    pointer-events: none;
+}
+
+/* scroll-trigger style ends here  */
+
+
+/* Responsive tweaks */
+@media (max-width: 768px) {
+    .banner-text {
+        font-size: clamp(1.75rem, 6vw, 3rem);
+        line-height: 1.3;
+    }
+
+    .learn-more-btn {
+        padding: 0.75rem 1.5rem;
+        font-size: 0.9rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner-text {
+        font-size: clamp(2rem, 7vw, 2.5rem);
+    }
+
+    .learn-more-btn {
+        padding: 0.6rem 1.2rem;
+        font-size: 0.85rem;
+    }
+
+    .banner-div::before {
+        top: 1vh;
+        width: 50vw;
+        height: 20vh;
+        border-bottom-right-radius: 4rem;
+    }
+    .footer-images{
+        justify-content: center !important;
+    }
+}
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+}
+
+.image-wrapper img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 50%;
+    width: 0;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+    transform: translateX(-50%);
+    transition: width 0.4s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    opacity: 0;
+    transition: width 0.4s ease, opacity 0.4s ease;
+    pointer-events: none;
+    z-index: 2;
+    font-size: 2rem;
+}
+
+.overlay i{
+    cursor: pointer;
+}
+
+.image-wrapper:hover .overlay {
+    width: 100%;
+    opacity: 1;
+    pointer-events: auto;
+}
+.footer-images{
+    display: flex;
+}
+
+.footer-images div{
+    height: 100px;
+    width: 100px;
+    margin: 5px !important;
+}
+
+.footer-images div img{
+    height: 100px;
+    width: 100px;
+}

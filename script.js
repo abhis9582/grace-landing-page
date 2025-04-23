@@ -1,0 +1,56 @@
+
+//handling fixed navbar on scrolling 
+function fixedHeaderOnScroll() {
+    const header = document.querySelector('.header');
+    let lastScrollY = window.scrollY;
+
+    window.addEventListener('scroll', () => {
+        const currentScrollY = window.scrollY;
+
+        if (currentScrollY > lastScrollY && currentScrollY > 100) {
+            // Scrolling Down
+            header.classList.add('fixed-header', 'header-hide');
+            header.classList.remove('header-show');
+        } else if (currentScrollY < lastScrollY) {
+            // Scrolling Up
+            header.classList.add('fixed-header', 'header-show');
+            header.classList.remove('header-hide');
+        }
+
+        lastScrollY = currentScrollY;
+    });
+}
+
+// Initialize the function
+document.addEventListener('DOMContentLoaded', fixedHeaderOnScroll);
+
+document.addEventListener('DOMContentLoaded', () => {
+    const header = document.querySelector('.header');
+    const banner = document.querySelector('.hero-section'); // Replace with your banner selector
+
+    if (header && banner) {
+        const headerHeight = header.offsetHeight;
+        banner.style.marginTop = `${headerHeight}px`;
+    }
+});
+
+// Scroll to top function when clicked
+function scrollToTop() {
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+// Update the progress of the circle as user scrolls
+window.addEventListener('scroll', () => {
+    const scrollTop = window.scrollY;
+    const docHeight = document.documentElement.scrollHeight - window.innerHeight;
+    const scrollPercent = scrollTop / docHeight;
+    const circle = document.getElementById('scroll-indicator');
+    const radius = 26;
+    const circumference = 2 * Math.PI * radius;
+
+    const offset = circumference * (1 - scrollPercent);
+    circle.style.strokeDashoffset = offset;
+});
