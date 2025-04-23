@@ -48,6 +48,7 @@ p {
 .navbar-brand {
     height: 60px;
     width: auto;
+    object-fit: cover;
 }
 
 .navbar-brand img {
