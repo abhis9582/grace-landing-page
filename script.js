@@ -67,3 +67,15 @@ function openModal(imageSrc) {
 function closeModal() {
     document.getElementById('imageModal').style.display = 'none';
 }
+
+// handling opening and closing popup form 
+
+function openContactForm() {
+    document.getElementById('contactForm').classList.add('active');
+    document.getElementById('overlay').classList.add('active');
+}
+
+function closeContactForm() {
+    document.getElementById('contactForm').classList.remove('active');
+    document.getElementById('overlay').classList.remove('active');
+}
