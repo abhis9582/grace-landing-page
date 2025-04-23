@@ -47,6 +47,7 @@ p {
 
 .navbar-brand {
     height: 60px;
+    width: 100px;
 }
 
 .navbar-brand img {
