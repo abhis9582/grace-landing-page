@@ -142,9 +142,9 @@ p {
 
 .fixed-btn {
     position: fixed; /* or `fixed` if you want it to stay while scrolling */
-    top: 20%;
+    top: 40%;
     right: 20px;
-    transform: translateY(-50%) rotate(-90deg);
+    transform: translateY(-50%) rotate(90deg);
     transform-origin: right center;
     z-index: 10;
 }
