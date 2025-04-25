@@ -86,6 +86,12 @@ p {
 /* header styling ends here  */
 
 /* hero section style starts here  */
+
+.hero-section {
+    margin-top: 76px !important;
+    transition: margin-top 0.3s ease;
+}
+
 .banner-div::before {
     content: "";
     position: absolute;

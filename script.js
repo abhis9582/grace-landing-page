@@ -26,13 +26,21 @@ document.addEventListener('DOMContentLoaded', fixedHeaderOnScroll);
 
 document.addEventListener('DOMContentLoaded', () => {
     const header = document.querySelector('.header');
-    const banner = document.querySelector('.hero-section'); // Replace with your banner selector
+    const banner = document.querySelector('.hero-section');
 
     if (header && banner) {
         const headerHeight = header.offsetHeight;
-        banner.style.marginTop = `${headerHeight}px`;
+
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 10) { // Add margin only after slight scroll
+                banner.style.marginTop = `${headerHeight}px`;
+            } else {
+                banner.style.marginTop = `0px`;
+            }
+        });
     }
 });
+
 
 // Scroll to top function when clicked
 function scrollToTop() {
