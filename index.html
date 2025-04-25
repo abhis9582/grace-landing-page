@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Grace Resilviaa: Graceful Living, Resilient Foundations</title>
-    <link rel="icon" href="/images/logo.png" type="image/x-icon">
+    <link rel="icon" href="/images/new-logo.png" type="image/x-icon">
     <!-- Bootstrap -->
     <link rel="stylesheet" href="/styles/bootstrap.min.css">
     <!-- Style sheet -->
@@ -26,39 +26,40 @@
                 <div class="container-fluid">
                     <!-- Logo -->
                     <a class="navbar-brand" href="#">
-                        <img src="/images/logo.png" alt="Logo">
+                        <img src="/images/new-logo.png" alt="Logo">
                     </a>
 
                     <!-- Toggler/hamburger -->
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
+                        <span class="navbar-toggler-icon hamburger-bg"></span>
                     </button>
+
 
                     <!-- Collapsible nav links -->
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav gap-lg-4 text-center text-lg-start">
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" href="#">Home</a>
+                                <a class="nav-link text-dark fw-bold" href="#">Home</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" href="#about-us">About Us</a>
+                                <a class="nav-link text-dark fw-bold" href="#about-us">About Us</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" href="#location">Location</a>
+                                <a class="nav-link text-dark fw-bold" href="#location">Location</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" href="#amenities">Amenities</a>
+                                <a class="nav-link text-dark fw-bold" href="#amenities">Amenities</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" href="#typesofapartments">Types of
+                                <a class="nav-link text-dark fw-bold" href="#typesofapartments">Types of
                                     apartments</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" href="#gallery">Gallery</a>
+                                <a class="nav-link text-dark fw-bold" href="#gallery">Gallery</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link text-white fw-bold" href="#contact-us">Contact Us</a>
+                                <a class="nav-link text-dark fw-bold" href="#contact-us">Contact Us</a>
                             </li>
                         </ul>
                     </div>
@@ -69,41 +70,46 @@
         <!-- header ends here -->
 
         <!-- hero section starts here -->
-        <section class="hero-section pt-2">
+        <section class="hero-section pt-2 position-relative">
             <div class="container-fluid m-0 p-0">
                 <div class="row g-0">
-                    <div class="col-md-6 col-sm-12 d-flex justify-content-center align-items-center pb-3">
-                        <div class="w-75">
-                            <p class="p-0 m-0 mx-1 animate__animated animate__fadeInDown animate__delay-1s">
-                                Grace Resilviaa
-                            </p>
-                            <p class="banner-text fw-bold animate__animated animate__zoomIn animate__delay-2s">
-                                Graceful Living, Resilient Foundations
-                            </p>
-                            <p class="animate__animated animate__fadeInUp animate__delay-3s">
-                                Grace Resilviaa is a low rise residential enclave in Sector 78, Gurgaon, where
-                                thoughtful design, premium craftsmanship, and cosmic inspiration converge. Four story
-                                buildings with only two homes per floor ensure privacy and exclusivity.
-                            </p>
-                            <button
-                                class="btn btn-success grace-btn learn-more-btn animate__animated animate__bounceIn animate__delay-4s"
-                                onclick="openContactForm()">
-                                Learn More <i class="fas fa-arrow-right arrow-icon"></i>
-                            </button>
-                        </div>
-                    </div>
-
                     <div
-                        class="banner-div col-md-6 col-sm-12 position-relative p-0 h-100 animate__animated animate__fadeInDown animate__delay-1s">
-                        <img src="/images/Grace_Banner_image.png" alt="banner-image" class="img-fluid banner-img ">
+                        class="banner-div col-12 position-relative p-0 h-100 animate__animated animate__fadeInDown animate__delay-1s">
+                        <img src="/images/Grace_banner_2.jpg" alt="banner-image" class="img-fluid banner-img ">
                     </div>
                 </div>
+            </div>
+            <!-- <div class="w-50 col-sm-12 d-flex justify-content-center align-items-center pb-3 
+            position-absolute z-2 top-0">
+                <div class="w-75">
+                    <p class="p-0 m-0 mx-1 animate__animated animate__fadeInDown animate__delay-1s">
+                        Grace Resilviaa
+                    </p>
+                    <p class="banner-text fw-bold animate__animated animate__zoomIn animate__delay-2s">
+                        Graceful Living, Resilient Foundations
+                    </p>
+                    <p class="animate__animated animate__fadeInUp animate__delay-3s">
+                        Grace Resilviaa is a low rise residential enclave in Sector 78, Gurgaon, where
+                        thoughtful design, premium craftsmanship, and cosmic inspiration converge. Four story
+                        buildings with only two homes per floor ensure privacy and exclusivity.
+                    </p>
+                    <button
+                        class="btn btn-success grace-btn learn-more-btn animate__animated animate__bounceIn animate__delay-4s"
+                        onclick="openContactForm()">
+                        Learn More <i class="fas fa-arrow-right arrow-icon"></i>
+                    </button>
+                </div>
+            </div> -->
+            <div class="fixed-btn" onclick="openContactForm()">
+                <button class="grace-btn btn btn-success">
+                    Enquire Now
+                </button>
             </div>
         </section>
         <!-- hero section ends here -->
 
         <!-- about us section starts here  -->
-        <section id="about-us">
+        <!-- <section id="about-us">
             <div class="container-fluid bg-light py-5 position-relative">
                 <div class="container">
                     <div class="row">
@@ -155,7 +161,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> -->
 
 
         <!-- about us section ends here  -->
@@ -267,10 +273,11 @@
             <div class="amenities-section">
                 <div class="container">
                     <p class="text-center text-uppercase p-0 m-0 fw-semibold animate__animated animate__fadeInDown">
-                        Luxurious</p>
+                        Handpicked Amenities</p>
                     <h1 class="text-uppercase fw-bold text-center animate__animated animate__fadeInUp">Amenities</h1>
                     <p class="text-center mb-5 animate__animated animate__fadeInUp animate__delay-1s">
-                        Every facet of Grace Resilviaa is crafted to nurture well-being and community:
+                        meticulously crafted to promote holistic well-being and cultivate
+                        meaningful community connections
                     </p>
 
                     <div class="row g-4 animate__animated animate__fadeInUp animate__delay-2s">
@@ -279,7 +286,8 @@
                             <div class="amenity-box">
                                 <div class="amenity-icon"><i class="fas fa-house-user"></i></div>
                                 <div class="amenity-label">Clubhouse</div>
-                                <p>A haven for gatherings and quiet reflection</p>
+                                <p>A comforting space designed for
+                                    heartfelt gatherings and quiet escapes</p>
                             </div>
                         </div>
 
@@ -288,7 +296,8 @@
                             <div class="amenity-box">
                                 <div class="amenity-icon"><i class="fas fa-parking"></i></div>
                                 <div class="amenity-label">Dedicated Parking</div>
-                                <p>Secure basement & stilt spaces reserved for your convenience</p>
+                                <p>Secure basement and stilt parking spaces
+                                    thoughtfully reserved for your convenience</p>
                             </div>
                         </div>
 
@@ -297,7 +306,8 @@
                             <div class="amenity-box">
                                 <div class="amenity-icon"><i class="fas fa-shield-halved"></i></div>
                                 <div class="amenity-label">Security & Maintenance</div>
-                                <p>24/7 vigilance and pristine upkeep</p>
+                                <p>With 24/7 vigilance and pristine upkeep,
+                                    we ensure your peace of mind</p>
                             </div>
                         </div>
 
@@ -306,7 +316,8 @@
                             <div class="amenity-box">
                                 <div class="amenity-icon"><i class="fas fa-person-running"></i></div>
                                 <div class="amenity-label">Jogging Track</div>
-                                <p>Meandering paths through landscaped greens</p>
+                                <p>Meandering pathways for jogging,
+                                    surrounded by lush landscapes</p>
                             </div>
                         </div>
 
@@ -315,7 +326,8 @@
                             <div class="amenity-box">
                                 <div class="amenity-icon"><i class="fas fa-heart-pulse"></i></div>
                                 <div class="amenity-label">Health & Sports Zone</div>
-                                <p>Spaces designed for mindful workouts</p>
+                                <p>Wellness spaces designed to support
+                                    mindful exercise</p>
                             </div>
                         </div>
 
@@ -324,7 +336,8 @@
                             <div class="amenity-box">
                                 <div class="amenity-icon"><i class="fas fa-users"></i></div>
                                 <div class="amenity-label">Community Areas</div>
-                                <p>Curated shared spaces that foster connection and joy</p>
+                                <p>Thoughtfully curated spaces designed to
+                                    inspire connection and joy</p>
                             </div>
                         </div>
                     </div>
@@ -332,10 +345,44 @@
             </div>
         </section>
         <!-- amenities section ends here -->
-
+        <!-- about us section starts here  -->
+        <section id="about-us">
+            <div class="container-fluid bg-light py-5 position-relative">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 wow animate__animated animate__fadeInUp about-us-section"
+                            data-wow-delay="1.2s">
+                            <div class="d-flex justify-content-center align-items-center h-100">
+                                <div class="text-center">
+                                    <p class="text-uppercase p-0 m-0 about-us-section-p">A Canvas of Graceful Living</p>
+                                    <h1 class="fs-1 fw-bold text-uppercase about-us-section-h1">An exclusive 3-BHK
+                                        residential enclave in Sector 78, Gurugram. </h1>
+                                    <p>Grace Resilviaa redefines residential elegance with low-rise buildings nestled at
+                                        the foothills of the Aravali Hills. Each four-story structure holds just two
+                                        expansive 3 BHK homes per floor, ensuring privacy and abundant natural light.
+                                        Crafted from premium materials and sustainable innovations like rainwater
+                                        harvesting, this enclave harmonizes resilience and artistry. Residents enjoy
+                                        curated amenities. Clubhouse, jogging trails, health and sports zone, dedicated
+                                        parking, and 24/7 security; set against lush landscapes. Seamless connectivity
+                                        to NH-8, Dwarka Expressway, and KMP Expressway places business hubs, schools,
+                                        and leisure destinations within easy reach. Here, every detail whispers
+                                        elegance, inviting you to celebrate life with cosmic grace, vividly embraced.
+                                    </p>
+                                    <button
+                                        class="btn btn-success grace-btn learn-more-btn animate__animated animate__bounceIn animate__delay-4s"
+                                        onclick="openContactForm()">
+                                        Learn More <i class="fas fa-arrow-right arrow-icon"></i>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
         <!-- types of apartments section starts here -->
 
-        <section id="typesofapartments">
+        <!-- <section id="typesofapartments">
             <div class="container py-5">
                 <p class="text-center text-uppercase m-0 p-0">Types of</p>
                 <h1 class="fw-bold text-uppercase text-center mb-5">apartment</h1>
@@ -380,7 +427,7 @@
 
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- types of apartments section ends here -->
 
         <!-- gallery section starts here  -->
@@ -497,7 +544,7 @@
                     <!-- Logo and Description Column -->
                     <div class="col-md-3 mb-4">
                         <div class="footer-logo">
-                            <img src="/images/logo.png" alt="Logo" />
+                            <img src="/images/new-logo.png" alt="Logo" />
                         </div>
                         <p class="">Rera: HRXXXXXXXXXXXXXX</p>
                         <p>We are a leading company providing innovative solutions for your business. Our goal is to

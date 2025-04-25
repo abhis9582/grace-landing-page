@@ -16,11 +16,15 @@
 
 :root {
     --theme-dark: #035434;
-    --button-color: linear-gradient(135deg, #057e4e, #035434);
+    --button-color: #fff;
 }
 
 html {
     scroll-behavior: smooth;
+}
+
+.hamburger-bg {
+    background: var(--theme-dark);
 }
 
 h1,
@@ -37,7 +41,7 @@ p {
 }
 
 .grace-btn {
-    background: var(--button-color) !important;
+    background: var(--theme-dark) !important;
 }
 
 /* header styling starts here  */
@@ -134,6 +138,28 @@ p {
 
 /* hero section style starts here  */
 
+/* fixed button css starts here  */
+
+.fixed-btn {
+    position: fixed; /* or `fixed` if you want it to stay while scrolling */
+    top: 20%;
+    right: 20px;
+    transform: translateY(-50%) rotate(-90deg);
+    transform-origin: right center;
+    z-index: 10;
+}
+
+.fixed-btn .btn {
+    border-radius: 0 0 10px 10px;
+    padding: 8px 16px;
+    font-weight: bold;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    white-space: nowrap;
+}
+
+
+
+/* fixed button css ends here  */
 
 /* about us section style starts here  */
 
@@ -398,6 +424,13 @@ footer .row {
     .about-us-section-h1,
     .about-location-p {
         text-align: justify !important;
+    }
+
+    .navbar-brand {
+        display: flex;
+        max-height: 100%;
+        max-width: 50%;
+        object-fit: contain;
     }
 }
 
