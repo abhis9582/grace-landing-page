@@ -419,9 +419,10 @@ footer .row {
     .about-us-section p {
         text-align: justify !important;
     }
-
+    .about-text{
+        text-align: center !important;
+    }
     .about-us-section-p,
-    .about-us-section-h1,
     .about-location-p {
         text-align: justify !important;
     }
