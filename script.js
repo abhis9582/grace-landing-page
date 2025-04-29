@@ -1,45 +1,55 @@
-
 //handling fixed navbar on scrolling 
 function fixedHeaderOnScroll() {
     const header = document.querySelector('.header');
+    const heroSection = document.querySelector('.hero-section');
     let lastScrollY = window.scrollY;
+    let isUserScrolled = false;
 
     window.addEventListener('scroll', () => {
         const currentScrollY = window.scrollY;
 
+        if (!isUserScrolled && currentScrollY !== lastScrollY) {
+            isUserScrolled = true;
+        }
+
+        if (!isUserScrolled) return;
+
         if (currentScrollY > lastScrollY && currentScrollY > 100) {
-            // Scrolling Down
+            // Scrolling down
             header.classList.add('fixed-header', 'header-hide');
             header.classList.remove('header-show');
+            heroSection.classList.add('with-margin');
         } else if (currentScrollY < lastScrollY) {
-            // Scrolling Up
+            // Scrolling up
             header.classList.add('fixed-header', 'header-show');
             header.classList.remove('header-hide');
+            heroSection.classList.add('with-margin');
         }
 
         lastScrollY = currentScrollY;
     });
 }
 
-// Initialize the function
-document.addEventListener('DOMContentLoaded', fixedHeaderOnScroll);
+window.addEventListener('DOMContentLoaded', fixedHeaderOnScroll);
 
-document.addEventListener('DOMContentLoaded', () => {
-    const header = document.querySelector('.header');
-    const banner = document.querySelector('.hero-section');
 
-    if (header && banner) {
-        const headerHeight = header.offsetHeight;
 
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 10) { // Add margin only after slight scroll
-                banner.style.marginTop = `${headerHeight}px`;
-            } else {
-                banner.style.marginTop = `0px`;
-            }
-        });
-    }
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     const header = document.querySelector('.header');
+//     const banner = document.querySelector('.hero-section');
+
+//     if (header && banner) {
+//         const headerHeight = header.offsetHeight;
+
+//         window.addEventListener('scroll', () => {
+//             if (window.scrollY > 10) {
+//                 banner.style.marginTop = `${headerHeight}px`;
+//             } else {
+//                 banner.style.marginTop = `0px`;
+//             }
+//         });
+//     }
+// });
 
 
 // Scroll to top function when clicked
@@ -77,7 +87,6 @@ function closeModal() {
 }
 
 // handling opening and closing popup form 
-
 function openContactForm() {
     document.getElementById('contactForm').classList.add('active');
     document.getElementById('overlay').classList.add('active');
@@ -87,3 +96,14 @@ function closeContactForm() {
     document.getElementById('contactForm').classList.remove('active');
     document.getElementById('overlay').classList.remove('active');
 }
+
+// Close the contact form when clicking outside (on overlay background)
+document.getElementById('overlay').addEventListener('click', function () {
+    closeContactForm();
+});
+
+// document.addEventListener('DOMContentLoaded', () => {
+//     setTimeout(() => {
+//         openContactForm();
+//     }, 3000);
+// });
