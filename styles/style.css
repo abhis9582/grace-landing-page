@@ -74,11 +74,11 @@ p {
     right: 0;
     z-index: 1050;
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 80px !important;
+    margin-bottom: 95px !important;
 }
 
 .hero-section.with-margin {
-    margin-top: 80px;
+    margin-top: 95px;
 }
 
 .header-hide {
