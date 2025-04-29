@@ -17,7 +17,7 @@
 :root {
     --theme-dark: #035434;
     --button-color: #fff;
-    --bg-gradient: radial-gradient(circle, #035434, #0a8d61);
+    --bg-gradient: radial-gradient(circle, #103023, #205846);
 }
 
 html {
@@ -51,7 +51,7 @@ p {
 }
 
 .navbar-brand {
-    height: 60px;
+    height: 80px;
     width: auto;
     /* margin: 1rem auto; */
 }
@@ -74,11 +74,11 @@ p {
     right: 0;
     z-index: 1050;
     transition: transform 0.3s ease-in-out;
-    margin-bottom: 76px !important;
+    margin-bottom: 80px !important;
 }
 
 .hero-section.with-margin {
-    margin-top: 76px;
+    margin-top: 80px;
 }
 
 .header-hide {
@@ -618,3 +618,18 @@ footer .row {
 .blurred-img {
     filter: blur(5px);
 }
+
+.artistic-text {
+    position: absolute;
+    bottom: 10px;
+    right: 20px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 4px 10px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    font-style: italic;
+    font-family: 'Georgia', serif;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.4);
+    pointer-events: none;
+  }
